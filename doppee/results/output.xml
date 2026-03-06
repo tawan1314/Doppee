@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.13.3 on darwin)" generated="2026-03-06T00:08:56.171371" rpa="false" schemaversion="5">
+<suite id="s1" name="Doppee" source="/Users/tawanduangchit/doppee">
+<suite id="s1-s1" name="Test" source="/Users/tawanduangchit/doppee/test">
+<suite id="s1-s1-s1" name="Test" source="/Users/tawanduangchit/doppee/test/test.robot">
+<test id="s1-s1-s1-t1" name="TC001 Register New User" line="9">
+<kw name="Open Doppee Browser" owner="Common" type="SETUP">
+<kw name="Open Browser" owner="Browser">
+<msg time="2026-03-06T00:08:56.273111" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2026-03-06T00:08:56.275107" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/Users/tawanduangchit/doppee/results/browser/traces/temp/b96e1fc3-e8d0-437e-ac2f-3b12da3219e8"}</msg>
+<msg time="2026-03-06T00:08:56.287096" level="INFO">Starting Browser process /Users/tawanduangchit/doppee/.venv/lib/python3.13/site-packages/Browser/wrapper/index.js using at 127.0.0.1:49190</msg>
+<msg time="2026-03-06T00:08:58.153202" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/Users/tawanduangchit/doppee/results/browser/traces/temp/b96e1fc3-e8d0-437e-ac2f-3b12da3219e8"}</msg>
+<msg time="2026-03-06T00:08:58.154803" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2026-03-06T00:08:58.161803" level="INFO">Successfully created context. </msg>
+<msg time="2026-03-06T00:08:58.161910" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<msg time="2026-03-06T00:08:59.006733" level="INFO">Successfully initialized new page object and opened url: https://training-platform2.doppio-tech.com/signup</msg>
+<arg>url=${Url}</arg>
+<arg>browser=${Browser}</arg>
+<arg>headless=${headless}</arg>
+<arg>pause_on_failure=${pause_on_failure}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2026-03-06T00:08:56.272798" elapsed="2.734538"/>
+</kw>
+<status status="PASS" start="2026-03-06T00:08:56.272338" elapsed="2.735346"/>
+</kw>
+<kw name="Validate Create Account Title" owner="RegisterPage">
+<kw name="Wait Until Element Is Visible" owner="Common">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-03-06T00:08:59.218768" level="INFO">Waited for Element with selector css=h2:has-text('Create account') at state visible</msg>
+<arg>selector=${selector}</arg>
+<arg>state=visible</arg>
+<arg>timeout=${timeout}</arg>
+<arg>message=${message}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-03-06T00:08:59.009398" elapsed="0.209580"/>
+</kw>
+<arg>selector=${LBL_CREATE_ACCOUNT}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>message=ไม่พบข้อความ "สมัครสมาชิก" ในหน้า สมัครสมาชิก หรือข้อความยังไม่พร้อมใช้งาน</arg>
+<status status="PASS" start="2026-03-06T00:08:59.009054" elapsed="0.210055"/>
+</kw>
+<status status="PASS" start="2026-03-06T00:08:59.008372" elapsed="0.210792"/>
+</kw>
+<kw name="Validate Section Username" owner="RegisterPage">
+<kw name="Wait Until Element Is Visible" owner="Common">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-03-06T00:08:59.223722" level="INFO">Waited for Element with selector css=label:has-text('Full Name') at state visible</msg>
+<arg>selector=${selector}</arg>
+<arg>state=visible</arg>
+<arg>timeout=${timeout}</arg>
+<arg>message=${message}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-03-06T00:08:59.220176" elapsed="0.003934"/>
+</kw>
+<arg>selector=${LBL_USERNAME}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>message=ไม่พบข้อความ "ชื่อผู้ใช้" ในหน้า สมัครสมาชิก หรือข้อความยังไม่พร้อมใช้งาน</arg>
+<status status="PASS" start="2026-03-06T00:08:59.219946" elapsed="0.004361"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="Common">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-03-06T00:08:59.239258" level="INFO">Waited for Element with selector css=input[placeholder='Full Name'] at state enabled</msg>
+<arg>selector=${selector}</arg>
+<arg>state=enabled</arg>
+<arg>timeout=${timeout}</arg>
+<arg>message=${message}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-03-06T00:08:59.224849" elapsed="0.014656"/>
+</kw>
+<arg>selector=${FIELD_USERNAME}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>message=ไม่พบช่องกรอกชื่อผู้ใช้ในหน้า สมัครสมาชิก หรือช่องกรอกยังไม่พร้อมใช้งาน</arg>
+<status status="PASS" start="2026-03-06T00:08:59.224484" elapsed="0.015223"/>
+</kw>
+<status status="PASS" start="2026-03-06T00:08:59.219432" elapsed="0.020406"/>
+</kw>
+<kw name="Input Username" owner="RegisterPage">
+<kw name="Input Text When Element Is Enabled" owner="Common">
+<kw name="Wait Until Element Is Enabled" owner="Common">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-03-06T00:08:59.245569" level="INFO">Waited for Element with selector css=input[placeholder='Full Name'] at state enabled</msg>
+<arg>selector=${selector}</arg>
+<arg>state=enabled</arg>
+<arg>timeout=${timeout}</arg>
+<arg>message=${message}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-03-06T00:08:59.241563" elapsed="0.004117"/>
+</kw>
+<arg>${selector}</arg>
+<arg>${timeout}</arg>
+<arg>${message}</arg>
+<status status="PASS" start="2026-03-06T00:08:59.241397" elapsed="0.004360"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-03-06T00:08:59.246114" level="INFO">Fills the text 'testuser' in the given field.</msg>
+<arg>selector=${selector}</arg>
+<arg>txt=${text}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-03-06T00:08:59.245833" elapsed="0.015013"/>
+</kw>
+<arg>selector=${FIELD_USERNAME}</arg>
+<arg>text=${username}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>message=ไม่สามารถกรอกชื่อผู้ใช้ได้เนื่องจากช่องกรอกชื่อผู้ใช้ในหน้า สมัครสมาชิก ไม่พร้อมใช้งาน</arg>
+<status status="PASS" start="2026-03-06T00:08:59.241156" elapsed="0.019833"/>
+</kw>
+<arg>username=${TC001.Username}</arg>
+<status status="PASS" start="2026-03-06T00:08:59.240463" elapsed="0.020611"/>
+</kw>
+<kw name="Validate Section Mobile Phone" owner="RegisterPage">
+<kw name="Wait Until Element Is Visible" owner="Common">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-03-06T00:08:59.270534" level="INFO">Waited for Element with selector css=label:has-text('Mobile Phone') at state visible</msg>
+<arg>selector=${selector}</arg>
+<arg>state=visible</arg>
+<arg>timeout=${timeout}</arg>
+<arg>message=${message}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-03-06T00:08:59.262384" elapsed="0.008623"/>
+</kw>
+<arg>selector=${LBL_MOBILE_PHONE}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>message=ไม่พบข้อความ "เบอร์โทรศัพท์" ในหน้า สมัครสมาชิก หรือข้อความยังไม่พร้อมใช้งาน</arg>
+<status status="PASS" start="2026-03-06T00:08:59.261834" elapsed="0.009360"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="Common">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-03-06T00:08:59.276725" level="INFO">Waited for Element with selector css=label:has-text('Mobile Phone') + input at state enabled</msg>
+<arg>selector=${selector}</arg>
+<arg>state=enabled</arg>
+<arg>timeout=${timeout}</arg>
+<arg>message=${message}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-03-06T00:08:59.271690" elapsed="0.005222"/>
+</kw>
+<arg>selector=${FIELD_MOBILE_PHONE}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>message=ไม่พบช่องกรอกเบอร์โทรศัพท์ในหน้า สมัครสมาชิก หรือช่องกรอกยังไม่พร้อมใช้งาน</arg>
+<status status="PASS" start="2026-03-06T00:08:59.271367" elapsed="0.005650"/>
+</kw>
+<status status="PASS" start="2026-03-06T00:08:59.261333" elapsed="0.015732"/>
+</kw>
+<kw name="Input Mobile Phone" owner="RegisterPage">
+<kw name="Input Text When Element Is Enabled" owner="Common">
+<kw name="Wait Until Element Is Enabled" owner="Common">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-03-06T00:08:59.282095" level="INFO">Waited for Element with selector css=label:has-text('Mobile Phone') + input at state enabled</msg>
+<arg>selector=${selector}</arg>
+<arg>state=enabled</arg>
+<arg>timeout=${timeout}</arg>
+<arg>message=${message}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-03-06T00:08:59.278271" elapsed="0.003982"/>
+</kw>
+<arg>${selector}</arg>
+<arg>${timeout}</arg>
+<arg>${message}</arg>
+<status status="PASS" start="2026-03-06T00:08:59.278125" elapsed="0.004224"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-03-06T00:08:59.282811" level="INFO">Fills the text '0812345678' in the given field.</msg>
+<arg>selector=${selector}</arg>
+<arg>txt=${text}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-03-06T00:08:59.282426" elapsed="0.005438"/>
+</kw>
+<arg>selector=${FIELD_MOBILE_PHONE}</arg>
+<arg>text=${mobile_phone}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>message=ไม่สามารถกรอกเบอร์โทรศัพท์ได้เนื่องจากช่องกรอกเบอร์โทรศัพท์ในหน้า สมัครสมาชิก ไม่พร้อมใช้งาน</arg>
+<status status="PASS" start="2026-03-06T00:08:59.277910" elapsed="0.010087"/>
+</kw>
+<arg>mobile_phone=${TC001.MobilePhone}</arg>
+<status status="PASS" start="2026-03-06T00:08:59.277293" elapsed="0.010762"/>
+</kw>
+<kw name="Validate Section Email" owner="RegisterPage">
+<kw name="Wait Until Element Is Visible" owner="Common">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-03-06T00:08:59.292771" level="INFO">Waited for Element with selector css=label:has-text('Email') at state visible</msg>
+<arg>selector=${selector}</arg>
+<arg>state=visible</arg>
+<arg>timeout=${timeout}</arg>
+<arg>message=${message}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-03-06T00:08:59.289227" elapsed="0.003701"/>
+</kw>
+<arg>selector=${LBL_EMAIL}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>message=ไม่พบข้อความ "อีเมล" ในหน้า สมัครสมาชิก หรือข้อความยังไม่พร้อมใช้งาน</arg>
+<status status="PASS" start="2026-03-06T00:08:59.289007" elapsed="0.004019"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="Common">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-03-06T00:08:59.297391" level="INFO">Waited for Element with selector css=label:has-text('Email') + input at state enabled</msg>
+<arg>selector=${selector}</arg>
+<arg>state=enabled</arg>
+<arg>timeout=${timeout}</arg>
+<arg>message=${message}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-03-06T00:08:59.293421" elapsed="0.004176"/>
+</kw>
+<arg>selector=${FIELD_EMAIL}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>message=ไม่พบช่องกรอกอีเมลในหน้า สมัครสมาชิก หรือช่องกรอกยังไม่พร้อมใช้งาน</arg>
+<status status="PASS" start="2026-03-06T00:08:59.293130" elapsed="0.004572"/>
+</kw>
+<status status="PASS" start="2026-03-06T00:08:59.288315" elapsed="0.009430"/>
+</kw>
+<kw name="Input Email" owner="RegisterPage">
+<kw name="Input Text When Element Is Enabled" owner="Common">
+<kw name="Wait Until Element Is Enabled" owner="Common">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-03-06T00:08:59.303456" level="INFO">Waited for Element with selector css=label:has-text('Email') + input at state enabled</msg>
+<arg>selector=${selector}</arg>
+<arg>state=enabled</arg>
+<arg>timeout=${timeout}</arg>
+<arg>message=${message}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-03-06T00:08:59.299236" elapsed="0.004391"/>
+</kw>
+<arg>${selector}</arg>
+<arg>${timeout}</arg>
+<arg>${message}</arg>
+<status status="PASS" start="2026-03-06T00:08:59.299082" elapsed="0.004642"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-03-06T00:08:59.304184" level="INFO">Fills the text 'Test01@gmail.com' in the given field.</msg>
+<arg>selector=${selector}</arg>
+<arg>txt=${text}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-03-06T00:08:59.303810" elapsed="0.005907"/>
+</kw>
+<arg>selector=${FIELD_EMAIL}</arg>
+<arg>text=${email}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>message=ไม่สามารถกรอกอีเมลได้เนื่องจากช่องกรอกอีเมลในหน้า สมัครสมาชิก ไม่พร้อมใช้งาน</arg>
+<status status="PASS" start="2026-03-06T00:08:59.298864" elapsed="0.010988"/>
+</kw>
+<arg>email=${TC001.Email}</arg>
+<status status="PASS" start="2026-03-06T00:08:59.298160" elapsed="0.011740"/>
+</kw>
+<kw name="Get Text When Element Is Visible" owner="Common">
+<kw name="Wait Until Element Is Visible" owner="Common">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-03-06T00:08:59.313091" level="INFO">Waited for Element with selector css=label[data-signup="signup-form0-label9"] at state visible</msg>
+<arg>selector=${selector}</arg>
+<arg>state=visible</arg>
+<arg>timeout=${timeout}</arg>
+<arg>message=${message}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-03-06T00:08:59.310767" elapsed="0.002428"/>
+</kw>
+<arg>${selector}</arg>
+<arg>${timeout}</arg>
+<arg>${message}</arg>
+<status status="PASS" start="2026-03-06T00:08:59.310578" elapsed="0.002682"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2026-03-06T00:08:59.321563" level="INFO">Text: 'Password'</msg>
+<msg time="2026-03-06T00:08:59.321797" level="INFO">${text} = Password</msg>
+<var>${text}</var>
+<arg>selector=${selector}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-03-06T00:08:59.313395" elapsed="0.008434"/>
+</kw>
+<return>
+<value>${text}</value>
+<status status="PASS" start="2026-03-06T00:08:59.321932" elapsed="0.000198"/>
+</return>
+<msg time="2026-03-06T00:08:59.322245" level="INFO">${Text} = Password</msg>
+<var>${Text}</var>
+<arg>selector=${LBL_PASSWORD}</arg>
+<status status="PASS" start="2026-03-06T00:08:59.310079" elapsed="0.012205"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Password Label Text: '${Text}'</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-03-06T00:08:59.322792" elapsed="0.000329"/>
+</kw>
+<kw name="Validate Section Password" owner="RegisterPage">
+<kw name="Wait Until Element Is Enabled" owner="Common">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-03-06T00:08:59.327316" level="INFO">Waited for Element with selector css=label:has-text('Password') + div input[data-testid='signup-password'] at state enabled</msg>
+<arg>selector=${selector}</arg>
+<arg>state=enabled</arg>
+<arg>timeout=${timeout}</arg>
+<arg>message=${message}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-03-06T00:08:59.323748" elapsed="0.003712"/>
+</kw>
+<arg>selector=${FIELD_PASSWORD}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>message=ไม่พบช่องกรอกรหัสผ่านในหน้า สมัครสมาชิก หรือช่องกรอกยังไม่พร้อมใช้งาน</arg>
+<status status="PASS" start="2026-03-06T00:08:59.323583" elapsed="0.003971"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="Common">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-03-06T00:09:04.360391" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg time="2026-03-06T00:09:04.360580" level="INFO">See also file:///Users/tawanduangchit/doppee/results/playwright-log.txt for additional details.</msg>
+<msg time="2026-03-06T00:09:04.360887" level="FAIL">ไม่พบไอคอนแสดงรหัสผ่านในหน้า สมัครสมาชิก หรือไอคอนยังไม่พร้อมใช้งาน</msg>
+<arg>selector=${selector}</arg>
+<arg>state=enabled</arg>
+<arg>timeout=${timeout}</arg>
+<arg>message=${message}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="FAIL" start="2026-03-06T00:08:59.327962" elapsed="5.038020">ไม่พบไอคอนแสดงรหัสผ่านในหน้า สมัครสมาชิก หรือไอคอนยังไม่พร้อมใช้งาน</status>
+</kw>
+<arg>selector=${ICON_SHOW_PASSWORD}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>message=ไม่พบไอคอนแสดงรหัสผ่านในหน้า สมัครสมาชิก หรือไอคอนยังไม่พร้อมใช้งาน</arg>
+<status status="FAIL" start="2026-03-06T00:08:59.327646" elapsed="5.038459">ไม่พบไอคอนแสดงรหัสผ่านในหน้า สมัครสมาชิก หรือไอคอนยังไม่พร้อมใช้งาน</status>
+</kw>
+<status status="FAIL" start="2026-03-06T00:08:59.323239" elapsed="5.042924">ไม่พบไอคอนแสดงรหัสผ่านในหน้า สมัครสมาชิก หรือไอคอนยังไม่พร้อมใช้งาน</status>
+</kw>
+<kw name="Input Password" owner="RegisterPage">
+<arg>password=${TC001.Password}</arg>
+<status status="NOT RUN" start="2026-03-06T00:09:04.366286" elapsed="0.000066"/>
+</kw>
+<kw name="Validate Section Confirm Password" owner="RegisterPage">
+<status status="NOT RUN" start="2026-03-06T00:09:04.366436" elapsed="0.000042"/>
+</kw>
+<kw name="Input Confirm Password" owner="RegisterPage">
+<arg>password=${TC001.Password}</arg>
+<status status="NOT RUN" start="2026-03-06T00:09:04.366547" elapsed="0.000039"/>
+</kw>
+<kw name="Validate Create Account Button" owner="RegisterPage">
+<status status="NOT RUN" start="2026-03-06T00:09:04.366649" elapsed="0.000034"/>
+</kw>
+<kw name="Validate Sign In Button" owner="RegisterPage">
+<status status="NOT RUN" start="2026-03-06T00:09:04.366745" elapsed="0.000036"/>
+</kw>
+<kw name="Close Doppee Browser" owner="Common" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-03-06T00:09:04.435817" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-06T00:09:04.367048" elapsed="0.069098"/>
+</kw>
+<status status="PASS" start="2026-03-06T00:09:04.366906" elapsed="0.069405"/>
+</kw>
+<doc>Owner: Tawan Duangchit
+|    ***| Description |***
+|    Objective: ทดสอบการสมัครสมาชิกด้วยข้อมูลที่ถูกต้อง
+|-------------------------------------------------------
+|    ***| Steps |***
+|    1. เปิดหน้า สมัครสมาชิก
+|    2. ตรวจสอบว่ามีข้อความ "สมัครสมาชิก" ปรากฏอยู่ในหน้า
+|    3. ตรวจสอบว่ามีช่องกรอกชื่อผู้ใช้ ปรากฏอยู่ในหน้า
+|    4. ตรวจสอบว่ามีช่องกรอกเบอร์โทรศัพท์ ปรากฏอยู่ในหน้า
+|    5. ตรวจสอบว่ามีช่องกรอกอีเมล ปรากฏอยู่ในหน้า
+|    6. ตรวจสอบว่ามีช่องกรอกรหัสผ่าน ปรากฏอยู่ในหน้า
+|    7. ตรวจสอบว่ามีช่องกรอกยืนยันรหัสผ่าน ปรากฏอยู่ในหน้า
+|    8. ตรวจสอบว่ามีปุ่มสร้างบัญชี ปรากฏอยู่ในหน้า
+|    9. ตรวจสอบว่ามีปุ่มเข้าสู่ระบบ ปรากฏอยู่ในหน้า
+|    10. กรอกข้อมูลที่ถูกต้องในช่องกรอกต่างๆ
+|    11. คลิกที่ปุ่มสร้างบัญชี
+|    12. ตรวจสอบว่าการสมัครสมาชิกสำเร็จและผู้ใช้ถูกนำไปยังหน้าโปรไฟล์หรือหน้าอื่นที่เหมาะสม
+|-------------------------------------------------------
+|    ***| Expected Results |***
+|    1. หน้า สมัครสมาชิก ถูกเปิดขึ้นมา
+|    2. ข้อความ "สมัครสมาชิก" ปรากฏอยู่ในหน้า
+|    3. ช่องกรอกชื่อผู้ใช้ ปรากฏอยู่ในหน้า
+|    4. ช่องกรอกเบอร์โทรศัพท์ ปรากฏอยู่ในหน้า
+|    5. ช่องกรอกอีเมล ปรากฏอยู่ในหน้า
+|    6. ช่องกรอกรหัสผ่าน ปรากฏอยู่ในหน้า
+|    7. ช่องกรอกยืนยันรหัสผ่าน ปรากฏอยู่ในหน้า
+|    8. ปุ่มสร้างบัญชี ปรากฏอยู่ในหน้า
+|    9. ปุ่มเข้าสู่ระบบ ปรากฏอยู่ในหน้า
+|    10. ข้อมูลถูกกรอกลงในช่องกรอกต่างๆ อย่างถูกต้อง
+|    11. ผู้ใช้คลิกที่ปุ่มสร้างบัญชี
+|    12. การสมัครสมาชิกสำเร็จและผู้ใช้ถูกนำไปยังหน้าโปรไฟล์หรือหน้าอื่นที่เหมาะสม
+==&gt;</doc>
+<status status="FAIL" start="2026-03-06T00:08:56.264460" elapsed="8.172333">ไม่พบไอคอนแสดงรหัสผ่านในหน้า สมัครสมาชิก หรือไอคอนยังไม่พร้อมใช้งาน</status>
+</test>
+<status status="FAIL" start="2026-03-06T00:08:56.186632" elapsed="8.258288"/>
+</suite>
+<status status="FAIL" start="2026-03-06T00:08:56.185621" elapsed="8.263531"/>
+</suite>
+<status status="FAIL" start="2026-03-06T00:08:56.173118" elapsed="8.277679"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Doppee" id="s1" pass="0" fail="1" skip="0">Doppee</stat>
+<stat name="Test" id="s1-s1" pass="0" fail="1" skip="0">Doppee.Test</stat>
+<stat name="Test" id="s1-s1-s1" pass="0" fail="1" skip="0">Doppee.Test.Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-03-06T00:08:56.273111" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+</errors>
+</robot>

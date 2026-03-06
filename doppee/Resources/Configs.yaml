@@ -1,0 +1,9 @@
+Timeout:
+  Short: 5s
+  Medium: 10s
+  Long: 30s
+
+Url: https://training-platform2.doppio-tech.com/signup
+
+Browser: chromium # กำหนดเบราว์เซอร์ที่ต้องการใช้ (chromium, firefox, webkit)
+Language: EN  # กำหนดภาษาที่ต้องการใช้ (TH หรือ EN)

@@ -1,0 +1,23 @@
+Translate:
+  TH:
+    RegisterPage:
+      CreateAccountLabel: สร้างบัญชี
+      UsernameLabel: ชื่อผู้ใช้
+      UsernameFieldPlaceholder: ชื่อผู้ใช้
+      MobilePhoneLabel: เบอร์โทรศัพท์
+      EmailLabel: อีเมล
+      PasswordLabel: รหัสผ่าน
+      ConfirmPasswordLabel: ยืนยันรหัสผ่าน
+      CreateAccountButton: สร้างบัญชี
+      SignInLabel: เข้าสู่ระบบ
+  EN:
+    RegisterPage:
+      CreateAccountLabel: Create account
+      UsernameLabel: Full Name
+      UsernameFieldPlaceholder: Full Name
+      MobilePhoneLabel: Mobile Phone
+      EmailLabel: Email
+      PasswordLabel: Password
+      ConfirmPasswordLabel: Confirm password
+      CreateAccountButton: Create account
+      SignInLabel: Sign in
